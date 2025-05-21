@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { Menu, X } from 'lucide-react'
 
 interface NavLink {
   label: string;
@@ -32,28 +33,31 @@ const NavLinks: NavLink[] = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="pt-6">
+    <nav className="pt-6 px-1.5 md:px-0">
       <div className="container border border-[#FFF] rounded-2xl bg-[rgba(255,255,255,0.20)]">
-        <div className="flex justify-between items-center h-16 px-2">
-          {/* Logo/Brand */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-semibold">
-              Logo
-            </Link>
-          </div>
+        <div className="flex justify-between items-center h-16 px-4">
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
 
-          {/* Navigation Links */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {NavLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`transition-colors ${pathname === link.href
-                  ? "text-pink-600 font-semibold"
-                  : "text-gray-600 hover:text-gray-900"
-                  }`}
+                className={`transition-colors ${
+                  pathname === link.href
+                    ? "text-pink-600 font-semibold"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
               >
                 {link.label}
               </Link>
@@ -70,6 +74,25 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 px-4 border-t border-gray-200">
+            {NavLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block py-2 ${
+                  pathname === link.href
+                    ? "text-pink-600 font-semibold"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </nav>
   )

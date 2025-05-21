@@ -1,29 +1,40 @@
 import Image from "next/image";
 import Link from "next/link";
 import BabyGrow from '@/public/images/baby-grow.png'
+import LeftTopCloud from '@/public/icons/left-top-cloude'
+import LeftBottomCloud from "@/public/icons/left-bottom-cloude";
+import RightTopCloud from "@/public/icons/right-top-cloude";
+import RightBottomCloud from "@/public/icons/right-bottom-cloude";
+import ContactUs from "./_components/contact-us";
 
 export default function Home() {
   return (
     <main className="min-h-screen relative overflow-hidden">
-      {/* Cloud decorations */}
-      {/* <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-10 w-20 h-12 bg-white rounded-full opacity-50" />
-        <div className="absolute top-20 right-20 w-24 h-14 bg-white rounded-full opacity-50" />
-        <div className="absolute bottom-40 left-1/4 w-16 h-10 bg-white rounded-full opacity-50" />
-        <div className="absolute top-1/3 right-1/3 w-20 h-12 bg-white rounded-full opacity-50" />
-      </div> */}
+      {/* Cloud decoration */}
+      <div className="hidden md:block absolute top-0 left-40 z-0">
+        <LeftTopCloud />
+      </div>
+      <div className="hidden md:block absolute top-28 left-[350px] z-0">
+        <LeftBottomCloud />
+      </div>
+      <div className="hidden md:block absolute top-8 right-[650px] z-0">
+        <RightBottomCloud />
+      </div>
+      <div className="hidden md:block absolute -top-0 right-40 z-0">
+        <RightTopCloud />
+      </div>
 
       {/* Main content */}
-      <div className="container mx-auto flex flex-col items-center justify-center min-h-screen text-center px-4">
+      <div className="container mx-auto flex flex-col items-center justify-center text-center px-4 py-8 md:py-0">
         {/* Logo */}
-        <div className="w-32 h-32 relative mb-8">
+        <div className="w-[242px] h-[242px] md:w-[242px] md:h-[242px] relative mb-6 md:mb-8 mt-4 md:mt-6">
           <div className="rounded-full bg-white p-4 shadow-sm">
             <div className="relative w-full h-full">
               <Image
                 src={BabyGrow}
                 alt="Baby Grow Logo"
-                width={120}
-                height={120}
+                width={242}
+                height={242}
                 className="object-contain"
                 priority
               />
@@ -32,22 +43,26 @@ export default function Home() {
         </div>
 
         {/* Text content */}
-        <h1 className="text-3xl md:text-4xl font-medium text-green-500 mb-4 max-w-2xl">
-          We are a day nursery caring for babies 3 months- 24 months.
+        <h1 className="text-3xl md:text-[48px] font-medium text-[#7CC466] mb-4 leading-tight">
+          We are a day nursery caring for <br /> babies 3 months- 24 months.
         </h1>
 
-        <p className="text-lg text-green-600 mb-8">
+        <p className="text-base md:text-lg text-green-600 px-4">
           Planting big dreams in little hearts
         </p>
 
         {/* Contact button */}
         <Link
-          href="/contact-us"
-          className="inline-block bg-green-500 text-white px-8 py-3 rounded-md hover:bg-green-600 transition-colors text-lg"
+          href="/"
+          className="inline-block rounded-lg mt-8 md:mt-[60px] border-2 border-[#62C544] bg-gradient-to-b from-[rgba(168,240,147,0.90)] to-[rgba(77,193,41,0.90)] text-white px-6 md:px-8 py-2 md:py-3 transition-colors text-base md:text-lg"
         >
           Contact Us
         </Link>
       </div>
+
+      <div>
+        <ContactUs />
+      </div>
     </main>
-  );
+  )
 }
