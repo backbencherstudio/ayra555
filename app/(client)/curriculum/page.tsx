@@ -1,14 +1,14 @@
 import React from 'react'
 import CurriculumBanner from './_components/curriculum-banner'
 import Register from './_components/register'
-import BabyPart from './_components/baby-part'
+import BabyGrowApproach from './_components/baby-grow-approach'
 
 export default function Curriculum() {
     return (
         <div>
             <CurriculumBanner />
             <Register />
-            <BabyPart/>
+            <BabyGrowApproach/>
         </div>
     )
 }
