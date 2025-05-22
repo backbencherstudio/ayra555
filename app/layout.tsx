@@ -9,7 +9,27 @@ const fredoka = Fredoka({
 
 export const metadata: Metadata = {
   title: "Ayra",
-  description: "Ayra is a platform for creating and sharing AI-powered applications.",
+  description:
+    "Ayra is a platform for creating and sharing AI-powered applications.",
+  icons: {
+    icon: [
+      // {
+      //   url: '/favicon.ico',
+      //   sizes: 'any',
+      //   type: 'image/x-icon',
+      // },
+      {
+        url: "/logo.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+    ],
+    apple: {
+      url: "/logo.png",
+      sizes: "180x180",
+      type: "image/png",
+    },
+  },
 };
 
 export default function RootLayout({
