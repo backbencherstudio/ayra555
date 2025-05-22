@@ -13,11 +13,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       case "/":
         return "bg-gradient-to-b from-[#FBC4D0] to-[#FEE8ED]";
       case "/nursery-vision":
-        return "bg-gradient-to-b from-[#DAFADC] to-[#FFFFFF";
+        return "bg-gradient-to-b from-[#DAFADC] to-[#FFFFFF]";
       case "/life-at-nursery":
-        return "bg-gradient-to-b from-green-300 to-green-100";
+        return "bg-gradient-to-b from-[#FFD8A9] to-[#FFFFFF]";
       default:
-        return "bg-gradient-to-b from-pink-300 to-pink-100";
+        return "bg-gradient-to-b from-[#FBC4D0] to-[#FEE8ED]";
     }
   };
 

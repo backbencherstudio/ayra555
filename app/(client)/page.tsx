@@ -9,7 +9,7 @@ import ContactUs from "./_components/contact-us";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative overflow-hidden">
+    <main className="min-h-screen relative overflow-hidden bg-gradient-to-b from-[#FBC4D0] to-[#FEE8ED]">
       {/* Cloud decoration */}
       <div className="hidden md:block absolute top-0 left-40 z-0">
         <LeftTopCloud />

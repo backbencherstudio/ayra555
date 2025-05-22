@@ -35,9 +35,22 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const getNavbarBackground = () => {
+    switch (pathname) {
+      case "/":
+        return "bg-[rgba(255,255,255,0.20)]";
+      case "/nursery-vision":
+        return "bg-[rgba(218,250,220,0.20)]";
+      case "/life-at-nursery":
+        return "bg-[rgba(255,216,169,0.20)]";
+      default:
+        return "bg-[rgba(255,255,255,0.20)]";
+    }
+  };
+
   return (
     <nav className="pt-6 px-1.5 md:px-0">
-      <div className="container border border-[#FFF] rounded-2xl bg-[rgba(255,255,255,0.20)]">
+      <div className={`container border border-[#FFF] rounded-2xl ${getNavbarBackground()}`}>
         <div className="flex justify-between items-center h-16 px-4">
           {/* Mobile Menu Button */}
           <button 
