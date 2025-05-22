@@ -43,32 +43,33 @@ const visionCards: VisionCard[] = [
 
 export default function NurseryVisionSection() {
     return (
-        <section className="px-4 py-16 relative min-h-screen">
+        <section className="px-4 py-8 sm:py-12 md:py-16 relative min-h-screen">
             {/* Background Pattern */}
             <div
-                className="absolute top-0 left-0 right-0 w-full h-[1120px] bg-no-repeat "
+                className="absolute top-0 left-0 right-0 w-full h-[1120px] bg-no-repeat"
                 style={{
                     backgroundImage: `url('/images/nursery-section-bg.png')`,
                     backgroundSize: 'cover',
-                    opacity: 0.9,
-
+                    opacity: 0.9
                 }}
             />
 
-            <div className='container mx-auto py-40'>
-                <div className="text-center mb-16 relative z-[2]">
-                    <h2 className="text-5xl leading-16 font-medium text-[#434642] mb-4">Nursery Vision</h2>
+            <div className='container mx-auto py-20 sm:py-28 md:py-40'>
+                <div className="text-center mb-8 sm:mb-12 md:mb-16 relative z-[2]">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-medium text-[#434642] mb-4">Nursery Vision</h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-[2]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 relative z-[2]">
                     {visionCards.map((card, index) => (
-                        <div key={index} className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 space-y-4">
+                        <div key={index} className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 sm:p-5 md:p-6 space-y-3 sm:space-y-4">
                             <div className="flex items-center gap-2">
-                                {card.Icon && <card.Icon />} {/* Changed from icon to Icon */}
-                                <h3 className="text-xl font-medium text-[#262925]">{card.title}</h3>
+                                <div className="flex-shrink-0">
+                                    {card.Icon && <card.Icon />}
+                                </div>
+                                <h3 className="text-lg sm:text-xl font-medium text-[#262925]">{card.title}</h3>
                             </div>
                             <Separator className="bg-[#7CC466]/20" />
-                            <p className="text-[#5E615D] leading-relaxed">{card.description}</p>
+                            <p className="text-sm sm:text-base text-[#5E615D] leading-relaxed">{card.description}</p>
                         </div>
                     ))}
                 </div>

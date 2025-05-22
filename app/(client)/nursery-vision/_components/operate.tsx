@@ -48,24 +48,25 @@ const operateCards: OperateCard[] = [
 
 export default function Operate() {
     return (
-        <section className="bg-white py-20">
+        <section className="bg-white py-10 sm:py-16 md:py-20">
             <div className="container mx-auto px-4">
-                <h2 className="text-5xl leading-16 font-medium text-[#434642] text-center mb-16">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-medium text-[#434642] text-center mb-8 sm:mb-12 md:mb-16">
                     How We Operate
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                     {operateCards.map((card, index) => (
                         <div key={index} className="flex flex-col items-center">
-                            <div className="relative w-full h-48 mb-4">
+                            <div className="relative w-full h-36 sm:h-40 md:h-48 mb-3 sm:mb-4">
                                 <Image
                                     src={card.image}
                                     alt={card.title}
                                     fill
                                     className="object-cover rounded-2xl"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 />
                             </div>
-                            <p className="text-[#262925] pr-8 text-base leading-6">
+                            <p className="text-[#262925] text-sm sm:text-base leading-relaxed px-2 sm:px-4 md:px-8 text-center">
                                 {card.description}
                             </p>
                         </div>
