@@ -81,7 +81,7 @@ export default function Navbar() {
           {/* Registration Button */}
           <div>
             <Link
-              href="/registration"
+              href="/contact-us"
               className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors"
             >
               Registration

@@ -4,6 +4,7 @@ import bannerImg from '@/public/images/banner-img.png'
 import { Button } from '@/components/ui/button'
 import BannerStarIcon from '@/public/icons/banner-star-icon'
 import BannerIcon from '@/public/icons/banner-icon'
+import Link from 'next/link'
 
 export default function LifeAtNurseryBanner() {
   return (
@@ -23,11 +24,13 @@ export default function LifeAtNurseryBanner() {
             </p>
             <BannerIcon className="w-8 sm:w-10 md:w-auto mt-1 sm:mt-2 md:mt-5" />
           </div>
-          <Button
-            className="mt-6 sm:mt-8 md:mt-12 border-2 border-[#62C544] bg-gradient-to-b from-[rgba(168,240,147,0.90)] to-[rgba(77,193,41,0.90)] text-white hover:bg-gradient-to-t text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3"
-          >
-            Contact Us
-          </Button>
+          <Link href="/contact-us">
+            <Button
+            className="mt-6 sm:mt-8 md:mt-12 border-2 border-[#62C544] bg-gradient-to-b from-[rgba(168,240,147,0.90)] to-[rgba(77,193,41,0.90)] text-white hover:bg-gradient-to-t text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 cursor-pointer"
+            >
+              Contact Us
+            </Button>
+          </Link>
         </div>
 
         {/* Right Image */}

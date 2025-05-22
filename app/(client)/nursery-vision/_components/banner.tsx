@@ -1,6 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
-import BabyClothes from '@/public/images/baby-clothes.png';
+import React from "react";
+import Image from "next/image";
+import BabyClothes from "@/public/images/baby-clothes.png";
+import Link from "next/link";
 
 export default function Banner() {
   return (
@@ -15,13 +16,14 @@ export default function Banner() {
             We are the baby experts
           </h2>
           <p className="text-base sm:text-lg text-[#5E615D] leading-relaxed">
-            Our team consists of passionate and caring educators with extensive expertise in infant development
+            Our team consists of passionate and caring educators with extensive
+            expertise in infant development
           </p>
-          <button
-            className="inline-block rounded-lg mt-20 sm:mt-28 md:mt-40 border-2 border-[#62C544] bg-gradient-to-b text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 transition-colors text-sm sm:text-base md:text-lg cursor-pointer hover:bg-gradient-to-t from-[rgba(168,240,147,0.90)] to-[rgba(77,193,41,0.90)] focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50 duration-300"
-          >
-            Contact Us
-          </button>
+          <Link href="/contact-us">
+            <button className="inline-block rounded-lg mt-20 sm:mt-28 md:mt-40 border-2 border-[#62C544] bg-gradient-to-b text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 transition-colors text-sm sm:text-base md:text-lg cursor-pointer hover:bg-gradient-to-t from-[rgba(168,240,147,0.90)] to-[rgba(77,193,41,0.90)] focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50 duration-300">
+              Contact Us
+            </button>
+          </Link>
         </div>
 
         {/* Right Image */}

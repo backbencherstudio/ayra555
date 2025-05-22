@@ -2,6 +2,7 @@ import Image from "next/image";
 import EyfsImageLeft from "@/public/images/curriculumLeft.png";
 import EyfsImageRight from "@/public/images/curriculumRight.png";
 import ThreeStarIcon from "@/public/icons/three-star-icon";
+import Link from "next/link";
 
 export default function CurriculumBanner() {
   return (
@@ -18,9 +19,11 @@ export default function CurriculumBanner() {
           <p className="text-sm sm:text-base text-[#262925] mb-6">
             Learning is broad, interconnected and dynamic
           </p>
-          <button className="inline-block rounded-lg mt-10 sm:mt-16 md:mt-24 border-2 border-[#62C544] bg-gradient-to-b text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 transition-colors text-sm sm:text-base md:text-lg cursor-pointer hover:bg-gradient-to-t from-[rgba(168,240,147,0.90)] to-[rgba(77,193,41,0.90)] focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-50 duration-300">
-            Contact Us
-          </button>
+          <Link href="/contact-us">
+            <button className="inline-block rounded-lg mt-10 sm:mt-16 md:mt-24 border-2 border-[#62C544] bg-gradient-to-b text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 transition-colors text-sm sm:text-base md:text-lg cursor-pointer hover:bg-gradient-to-t from-[rgba(168,240,147,0.90)] to-[rgba(77,193,41,0.90)] focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-50 duration-300">
+              Contact Us
+            </button>
+          </Link>
         </div>
 
         {/* Illustration Section */}
