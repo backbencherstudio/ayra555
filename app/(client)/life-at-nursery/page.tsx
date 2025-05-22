@@ -3,6 +3,7 @@ import LifeAtNurseryBanner from './_components/baner'
 import FirstTimeAtNursery from './_components/first-time-at-nursery'
 import KeyWorkers from './_components/key-workers'
 import SmoothSettling from './_components/smooth-settling'
+import HealthyBody from './_components/healthy-body'
 
 export default function LifeAtNursary() {
   return (
@@ -11,6 +12,7 @@ export default function LifeAtNursary() {
         <FirstTimeAtNursery/>
         <KeyWorkers/>
         <SmoothSettling/>
+        <HealthyBody/>
     </div>
   )
 }
