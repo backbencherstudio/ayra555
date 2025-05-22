@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       case "/life-at-nursery":
         return "bg-gradient-to-b from-[#FFFBC4] to-[#FFFFFF]";
       default:
-        return "bg-gradient-to-b from-[#FBC4D0] to-[#FEE8ED]";
+        return "bg-gradient-to-b from-[#FFECD3] to-[#FFFFFF]";
     }
   };
 
