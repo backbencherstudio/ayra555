@@ -60,7 +60,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <div>
+      <div className="mt-[20px] md:mt-[100px] lg:mt-[150px] xl:mt-[236px]">
         <ContactUs />
       </div>
     </main>
