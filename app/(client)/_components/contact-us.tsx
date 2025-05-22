@@ -1,5 +1,6 @@
 'use client'
 
+import { Mail, MapPin, Phone } from 'lucide-react';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -31,26 +32,27 @@ const ContactUs = () => {
           {/* Left Section - Contact Information */}
           <div className="bg-[#FFD8A9] p-8 md:w-2/5">
             <h2 className="text-2xl text-[#262925] font-medium mb-4">We'd love to hear from you</h2>
-            <p className="text-gray-700 mb-6">
+            <p className="text-[#5E615D] font-normal text-lg leading-6  mb-6">
               Please complete the form or contact us and we'd love to help your child start their learning journey.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-6 mt-[112px]">
               <div>
-                <h3 className="font-medium mb-2">Baby Grow operating hours</h3>
-                <p className="text-gray-700">Monday-Friday 7 am-7 pm</p>
-                <p className="text-gray-700">Saturday 8 am-3 pm</p>
-                <p className="text-gray-700">51 weeks a year</p>
+                <h3 className="font-medium mb-2 text-[#262925] text-xl ">Baby Grow operating hours</h3>
+                <p className="text-[#434642] font-normal text-base leading-6">Monday-Friday 7 am-7 pm</p>
+                <p className="text-[#434642] font-normal text-base leading-6">Saturday 8 am-3 pm</p>
+                <p className="text-[#434642] font-normal text-base leading-6">51 weeks a year</p>
+              </div>
+              <hr className='text-[#434642]'/>
+
+              <div>
+                <p className="text-gray-700 flex items-center gap-2"><Phone className='w-4 h-4' /> 00448198853</p>
+                <p className="text-gray-700 flex items-center gap-2"><Mail className='w-4 h-4' /> info@babygrowcare.co.uk</p>
               </div>
 
               <div>
-                <p className="text-gray-700">📞 00448198853</p>
-                <p className="text-gray-700">✉️ info@babygrowcare.co.uk</p>
-              </div>
-
-              <div>
-                <p className="text-gray-700">
-                  📍 St Peters church, St. Peter's terrace, SW6 6SJ
+                <p className="text-gray-700 flex items-center gap-2">
+                <MapPin className='w-4 h-4' /> St Peters church, St. Peter's terrace, SW6 6SJ
                 </p>
               </div>
             </div>
@@ -99,9 +101,8 @@ const ContactUs = () => {
                   <input
                     type="text"
                     placeholder="Enter your full name..."
-                    className={`w-full p-3 border ${
-                      errors.fullName ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg`}
+                    className={`w-full p-3 border ${errors.fullName ? 'border-red-500' : 'border-gray-300'
+                      } rounded-lg`}
                     {...register('fullName', {
                       required: 'Full name is required',
                       minLength: { value: 2, message: 'Name must be at least 2 characters' }
@@ -116,9 +117,8 @@ const ContactUs = () => {
                   <input
                     type="email"
                     placeholder="Enter your email..."
-                    className={`w-full p-3 border ${
-                      errors.email ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg`}
+                    className={`w-full p-3 border ${errors.email ? 'border-red-500' : 'border-gray-300'
+                      } rounded-lg`}
                     {...register('email', {
                       required: 'Email is required',
                       pattern: {
@@ -145,9 +145,8 @@ const ContactUs = () => {
                   <textarea
                     placeholder="Type your message here..."
                     rows={4}
-                    className={`w-full p-3 border ${
-                      errors.message ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg resize-none`}
+                    className={`w-full p-3 border ${errors.message ? 'border-red-500' : 'border-gray-300'
+                      } rounded-lg resize-none`}
                     {...register('message', {
                       required: 'Message is required',
                       minLength: { value: 10, message: 'Message must be at least 10 characters' }
