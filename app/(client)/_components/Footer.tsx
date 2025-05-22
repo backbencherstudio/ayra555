@@ -39,20 +39,20 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-[140px]">
           {/* Quote Section */}
           <div className="space-y-4 w-full md:w-[50%]">
-            <h3 className="text-2xl md:text-[32px] font-normal text-white leading-normal md:leading-11">
+            <h3 className="text-xl md:text-[32px] font-normal text-white leading-normal md:leading-11">
               A baby is the beginning of everything-hope, dreams and endless love.
             </h3>
           </div>
 
           {/* Quick Links */}
           <div className='w-full md:w-[30%]'>
-            <h4 className="text-xl font-normal text-white mb-4 leading-[30px]">Quick Links</h4>
+            <h4 className="text-lg font-normal text-white mb-4 leading-[30px]">Quick Links</h4>
             <ul className="space-y-2">
               {QuickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white hover:underline text-base leading-5 transition-colors"
+                    className="text-white hover:underline text-sm leading-5 transition-colors"
                   >
                     {link.label}
                   </Link>
