@@ -5,14 +5,14 @@ import IdentificationIcon from '@/public/icons/identification-icon';
 import SupportIcon from '@/public/icons/support-icon';
 
 interface AimCard {
-  Icon?: React.ComponentType; // Changed from icon: React.ReactNode
+  Icon?: React.ComponentType;
   title: string;
   description: string;
 }
 
 const aimCards: AimCard[] = [
   {
-    Icon: PepoleIcon, // Changed from icon to Icon
+    Icon: PepoleIcon, 
     title: "Support Parents",
     description: "To support and guide parents with tools and knowledge in order for them to become confident and enjoy parenthood."
   },
@@ -36,7 +36,7 @@ export default function BelieveIn() {
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-medium text-[#434642] mb-4 sm:mb-5 md:mb-6">What We Believe In</h2>
           <p className="text-sm sm:text-base md:text-base text-[#262925] leading-relaxed">
-            We believe the early years are foundational to a child's lifelong health and development. Children learn best through purposeful, educational play that engages their curiosity and imagination. We recognize that repetition is essential for building strong developmental foundations. Through positive language consistent encouragement and recognition of their efforts, children can build confidence, resilience and great character.
+            We believe the early years are foundational to a child lifelong health and development. Children learn best through purposeful, educational play that engages their curiosity and imagination. We recognize that repetition is essential for building strong developmental foundations. Through positive language consistent encouragement and recognition of their efforts, children can build confidence, resilience and great character.
           </p>
         </div>
 

@@ -34,10 +34,10 @@ const ContactUs = () => {
           {/* Left Section */}
           <div className="bg-[#FFD8A9] p-6 sm:p-8 md:w-2/5">
             <h2 className="text-xl sm:text-2xl text-[#262925] font-medium mb-4">
-              We'd love to hear from you
+              We&apos;d love to hear from you
             </h2>
             <p className="text-[#5E615D] text-base sm:text-lg leading-6 mb-6">
-              Please complete the form or contact us and we'd love to help your child start their learning journey.
+              Please complete the form or contact us and we&apos;d love to help your child start their learning journey.
             </p>
 
             <div className="space-y-6 sm:mt-20 md:mt-[112px]">
@@ -62,7 +62,7 @@ const ContactUs = () => {
 
               <div>
                 <p className="text-gray-700 flex items-center gap-2 text-sm sm:text-base">
-                  <MapPin className="w-4 h-4" /> St Peters church, St. Peter's terrace, SW6 6SJ
+                  <MapPin className="w-4 h-4" /> St Peters church, St. Peter&apos;s terrace, SW6 6SJ
                 </p>
               </div>
             </div>

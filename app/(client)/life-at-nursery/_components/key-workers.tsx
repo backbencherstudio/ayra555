@@ -3,7 +3,6 @@ import Image from 'next/image'
 import KeyWorkersOne from '@/public/images/worker-01.png'
 import KeyWorkersTwo from '@/public/images/worker-02.png'
 import KeyWorkersThree from '@/public/images/worker-03.png'
-import KeyWorkersBg from '@/public/images/workers-bg.png'
 
 export default function KeyWorkers() {
   return (
@@ -15,7 +14,7 @@ export default function KeyWorkers() {
             Key workers
           </h2>
           <p className="text-base sm:text-lg md:text-base text-[#262925] leading-6">
-            Through our key person approach, we promote stability and trust by assigning a consistent educator to support each child's individual needs, serving as the primary contact for families.
+            Through our key person approach, we promote stability and trust by assigning a consistent educator to support each child&apos;s individual needs, serving as the primary contact for families.
           </p>
         </div>
 

@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { Menu, X } from 'lucide-react'
+'use client';
+
+import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Menu, X } from 'lucide-react';
 
 interface NavLink {
   label: string;
@@ -9,36 +11,20 @@ interface NavLink {
 }
 
 const NavLinks: NavLink[] = [
-  {
-    label: "Home",
-    href: "/",
-  },
-  {
-    label: "Nursery Vision",
-    href: "/nursery-vision",
-  },
-  {
-    label: "Life at Nursery",
-    href: "/life-at-nursery",
-  },
-  {
-    label: "Curriculum",
-    href: "/curriculum",
-  },
-  {
-    label: "Contact Us",
-    href: "/contact-us",
-  },
+  { label: "Home", href: "/" },
+  { label: "Nursery Vision", href: "/nursery-vision" },
+  { label: "Life at Nursery", href: "/life-at-nursery" },
+  { label: "Curriculum", href: "/curriculum" },
+  { label: "Contact Us", href: "/contact-us" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   const getNavbarBackground = () => {
     switch (pathname) {
-      case "/":
-        return "bg-[rgba(255,255,255,0.20)]";
       case "/nursery-vision":
         return "bg-[rgba(218,250,220,0.20)]";
       case "/life-at-nursery":
@@ -48,15 +34,31 @@ export default function Navbar() {
     }
   };
 
+  // 👇 Close on outside click
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isMenuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isMenuOpen]);
+
   return (
     <nav className="pt-6 px-1.5 md:px-0">
-      <div className={`container border border-[#FFF] rounded-2xl ${getNavbarBackground()}`}>
+      <div
+        ref={menuRef}
+        className={`container border border-[#FFF] rounded-2xl ${getNavbarBackground()}`}
+      >
         <div className="flex justify-between items-center h-16 px-4">
           {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
@@ -66,11 +68,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`transition-colors ${
-                  pathname === link.href
+                className={`transition-colors ${pathname === link.href
                     ? "text-pink-600 font-semibold"
                     : "text-gray-600 hover:text-gray-900"
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>
@@ -95,11 +96,11 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block py-2 ${
-                  pathname === link.href
+                onClick={() => setIsMenuOpen(false)} // 👈 close menu on click
+                className={`block py-2 ${pathname === link.href
                     ? "text-pink-600 font-semibold"
                     : "text-gray-600 hover:text-gray-900"
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>
@@ -108,6 +109,5 @@ export default function Navbar() {
         )}
       </div>
     </nav>
-  )
+  );
 }
-

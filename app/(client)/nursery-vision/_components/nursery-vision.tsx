@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
 import StarIcon from '@/public/icons/star-icon';
 import InclusionIcon from '@/public/icons/inclusion-icon';

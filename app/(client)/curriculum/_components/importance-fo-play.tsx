@@ -1,5 +1,4 @@
 import Image from "next/image";
-import BgImage from "@/public/images/play-bg.png";
 import CommunicationIcon from "@/public/images/icon-01.png";
 import CreativityIcon from "@/public/images/icon-02.png";
 import EmotionalIcon from "@/public/images/icon-03.png";
