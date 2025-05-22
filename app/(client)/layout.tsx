@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       case "/":
         return "bg-gradient-to-b from-[#FBC4D0] to-[#FEE8ED]";
       case "/nursery-vision":
-        return "bg-gradient-to-b from-blue-300 to-blue-100";
+        return "bg-gradient-to-b from-[#DAFADC] to-[#FFFFFF";
       case "/life-at-nursery":
         return "bg-gradient-to-b from-green-300 to-green-100";
       default:
