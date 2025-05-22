@@ -13,22 +13,14 @@ export const metadata: Metadata = {
     "Ayra is a platform for creating and sharing AI-powered applications.",
   icons: {
     icon: [
-      // {
-      //   url: '/favicon.ico',
-      //   sizes: 'any',
-      //   type: 'image/x-icon',
-      // },
       {
+        rel: 'icon',
         url: "/logo.png",
         sizes: "32x32",
         type: "image/png",
       },
     ],
-    apple: {
-      url: "/logo.png",
-      sizes: "180x180",
-      type: "image/png",
-    },
+    shortcut: ["/logo.png"],
   },
 };
 
