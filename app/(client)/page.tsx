@@ -43,7 +43,7 @@ export default function Home() {
         </div>
 
         {/* Text content */}
-        <h1 className="text-3xl md:text-[48px] font-medium text-[#7CC466] mb-4 leading-tight">
+        <h1 className="text-xl md:text-[48px] font-medium text-[#7CC466] mb-4 leading-tight">
           We are a day nursery caring for <br /> babies 3 months- 24 months.
         </h1>
 
