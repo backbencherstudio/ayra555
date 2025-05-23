@@ -39,10 +39,10 @@ const ContactUs = () => {
       };
 
       const response = await emailjs.send(
-        'service_fj1pobi',
-        'template_l3p07zq',
+        'service_b19u5ys',
+        'template_wcw0j0y',
         templateParams,
-        'ov7v4K9x-JXCFjYI5'
+        'goJJs8WWzrEjpRl1E'
       );
 
       if (response.status === 200) {
