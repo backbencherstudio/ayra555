@@ -19,13 +19,12 @@ const ContactUs = () => {
   const {
     register,
     handleSubmit,
-    watch,
     reset,
     formState: { errors },
   } = useForm<FormInputs>();
 
   // Watch for changes in the inquiryType field
-  const selectedInquiryType = watch('inquiryType');
+  // const selectedInquiryType = watch('inquiryType');
 
   const onSubmit = async (data: FormInputs) => {
     try {
