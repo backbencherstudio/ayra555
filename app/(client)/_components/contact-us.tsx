@@ -1,8 +1,10 @@
 'use client';
 
 import { Mail, MapPin, Phone } from 'lucide-react';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser';
+import { toast } from 'sonner';
 
 interface FormInputs {
   inquiryType: 'general' | 'registration' | 'educator';
@@ -13,14 +15,46 @@ interface FormInputs {
 }
 
 const ContactUs = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const {
     register,
     handleSubmit,
+    watch,
+    reset,
     formState: { errors },
   } = useForm<FormInputs>();
 
-  const onSubmit = (data: FormInputs) => {
-    console.log(data);
+  // Watch for changes in the inquiryType field
+  const selectedInquiryType = watch('inquiryType');
+
+  const onSubmit = async (data: FormInputs) => {
+    try {
+      setIsSubmitting(true);
+      const templateParams = {
+        inquiry_type: data.inquiryType.charAt(0).toUpperCase() + data.inquiryType.slice(1),
+        full_name: data.fullName,
+        email: data.email,
+        whatsapp: data.whatsapp || 'Not provided',
+        message: data.message,
+      };
+
+      const response = await emailjs.send(
+        'service_fj1pobi',
+        'template_l3p07zq',
+        templateParams,
+        'ov7v4K9x-JXCFjYI5'
+      );
+
+      if (response.status === 200) {
+        toast.success('Message sent successfully!');
+        reset();
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast.error('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -155,9 +189,10 @@ const ContactUs = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#7CC466] text-white py-3 rounded-lg hover:bg-[#62C544] transition-colors cursor-pointer text-lg sm:text-xl"
+                disabled={isSubmitting}
+                className={`w-full bg-[#7CC466] text-white py-3 rounded-lg transition-colors cursor-pointer text-lg sm:text-xl ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#62C544]'}`}
               >
-                Submit
+                {isSubmitting ? 'Sending...' : 'Submit'}
               </button>
             </form>
           </div>
