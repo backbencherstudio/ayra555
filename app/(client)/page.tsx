@@ -30,8 +30,8 @@ export default function Home() {
         <div className="w-[242px] h-[242px] md:w-[242px] md:h-[242px] relative mb-6 md:mb-8 mt-4 md:mt-6">
           <div className="rounded-full bg-white p-4 shadow-sm">
             <div className="relative w-full h-full">
-              <img
-                src={BabyGrow.src}
+              <Image
+                src={BabyGrow}
                 alt="Baby Grow Logo"
                 width={242}
                 height={242}

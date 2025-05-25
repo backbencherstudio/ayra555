@@ -31,10 +31,11 @@ export default function HealthyBody() {
                     </ul>
 
                     <div className="mt-8">
-                        <img
-                            src={AnimatedBottlesImg.src}
+                        <Image
+                            src={AnimatedBottlesImg}
                             alt="Animated Bottles"
                             className="w-full max-w-md h-auto object-contain mx-auto"
+                            placeholder="blur"
                         />
                     </div>
                 </div>
@@ -42,11 +43,11 @@ export default function HealthyBody() {
                 {/* Right Column */}
                 <div>
                     <div className="mb-6 flex justify-center">
-                        <img   
-                            src={BottlesImg.src}
+                        <Image
+                            src={BottlesImg}
                             alt="Bottles"
                             className="w-full max-w-xs h-auto object-contain"
-                            
+                            placeholder="blur"
                         />
                     </div>
                     <h4 className="text-sm sm:text-base font-semibold text-[#262925] mb-2">

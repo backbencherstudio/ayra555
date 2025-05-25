@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import BabyGrow from '@/public/images/baby-grow.png'
 import { Separator } from '@/components/ui/separator';
 
@@ -63,9 +64,10 @@ export default function Footer() {
           {/* Logo Section */}
           <div className="flex justify-center md:justify-end w-full md:w-[20%]">
             <div className="w-[120px] h-[120px] md:w-[163px] md:h-[163px] relative">
-              <img
-                src={BabyGrow.src}
+              <Image
+                src={BabyGrow}
                 alt="Baby Grow Logo"
+                fill
                 className="object-contain"
               />
             </div>

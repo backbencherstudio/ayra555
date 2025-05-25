@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ImgPrime from "@/public/images/baby-01.png";
 import ImgSpecific from "@/public/images/baby-02.png";
 import ImgPlayful from "@/public/images/baby-03.png";
@@ -8,10 +9,11 @@ export default function BabyGrowApproach() {
       {/* Section 1: Prime Areas */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div>
-          <img
-            src={ImgPrime.src}
+          <Image
+            src={ImgPrime}
             alt="Prime Areas"
             className="w-full h-auto rounded-xl object-contain"
+            placeholder="blur"
           />
         </div>
         <div>
@@ -24,14 +26,12 @@ export default function BabyGrowApproach() {
             <li>Physical development</li>
           </ul>
           <p className="text-sm sm:text-base text-[#262925]">
-            The three prime areas describe universal core aspects of child
-            development. They are time-sensitive because of biological factors
-            that enable rapid brain connections, particularly in the first few
-            years of life.
+            The three prime areas describe universal core aspects of child development. They are time-sensitive
+            because of biological factors that enable rapid brain connections, particularly in the first few years
+            of life.
             <br />
             <br />
-            Developmental steps missed at this crucial stage are much harder to
-            address later on.
+            Developmental steps missed at this crucial stage are much harder to address later on.
           </p>
         </div>
       </div>
@@ -40,8 +40,8 @@ export default function BabyGrowApproach() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="order-2 md:order-1">
           <h3 className="text-lg sm:text-xl md:text-2xl font-normal leading-8 text-[#262925] mb-4">
-            Once the 3 prime areas are well established, children can then begin
-            to explore and develop in the 4 specific areas
+            Once the 3 prime areas are well established, children can then begin to explore and develop
+            in the 4 specific areas
           </h3>
           <ul className="list-disc list-inside space-y-1 text-sm sm:text-base text-[#262925]">
             <li>Literacy</li>
@@ -51,10 +51,11 @@ export default function BabyGrowApproach() {
           </ul>
         </div>
         <div className="order-1 md:order-2">
-          <img
-            src={ImgSpecific.src}
+          <Image
+            src={ImgSpecific}
             alt="Specific Areas"
             className="w-full h-auto rounded-xl object-contain"
+            placeholder="blur"
           />
         </div>
       </div>
@@ -62,10 +63,11 @@ export default function BabyGrowApproach() {
       {/* Section 3: Playful Approaches */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div>
-          <img
-            src={ImgPlayful.src}
+          <Image
+            src={ImgPlayful}
             alt="Playful Approaches"
             className="w-full h-auto rounded-xl object-contain"
+            placeholder="blur"
           />
         </div>
         <div>
@@ -80,10 +82,7 @@ export default function BabyGrowApproach() {
             </div>
             <div>
               <p className="font-medium">Child-initiated play</p>
-              <p>
-                Adult support for an enabling environment and sensitive
-                interaction
-              </p>
+              <p>Adult support for an enabling environment and sensitive interaction</p>
             </div>
             <div>
               <p className="font-medium">Focused learning</p>

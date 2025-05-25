@@ -30,9 +30,10 @@ export default function Banner() {
         <div className="w-full md:w-1/2">
           <div className="rounded-3xl p-4 sm:p-6 md:p-8">
             <div className="relative aspect-square w-full max-w-[490px] mx-auto">
-              <img
-                src={BabyClothes.src}
+              <Image
+                src={BabyClothes}
                 alt="Baby Clothes and Accessories"
+                fill
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 490px"
               />
