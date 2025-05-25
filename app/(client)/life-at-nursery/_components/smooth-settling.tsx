@@ -47,8 +47,8 @@ export default function SmoothSettling() {
     <>
 
       <section className="relative w-full py-16">
-        <Image
-          src={bg}
+        <img
+          src={bg.src}
           alt="Smooth Settling"
           className="w-full object-cover"
         />
@@ -65,10 +65,10 @@ export default function SmoothSettling() {
 
           {/* Background Decorative Elements */}
           <div className="absolute md:left-[150px] xl:left-[450px] top-72 hidden lg:block">
-            <Image src={BgLeft} alt="Decorative Left" width={80} height={80} />
+            <img src={BgLeft.src} alt="Decorative Left" width={80} height={80} />
           </div>
           <div className="absolute md:right-[100px] xl:right-[300px] top-64  hidden lg:block">
-            <Image src={BgRight} alt="Decorative Right" width={50} height={50} />
+            <img src={BgRight.src} alt="Decorative Right" width={50} height={50} />
           </div>
 
           <div className="container mx-auto px-4">
@@ -85,10 +85,9 @@ export default function SmoothSettling() {
               {visitCards.map((card, index) => (
                 <div key={index} className="relative pb-24 sm:pb-28 lg:pb-32">
                   <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] lg:h-[240px] rounded-2xl overflow-hidden">
-                    <Image
+                    <img
                       src={card.image}
                       alt={card.title}
-                      fill
                       className="object-cover rounded-2xl"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       priority={index === 0}

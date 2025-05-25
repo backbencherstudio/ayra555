@@ -1,4 +1,3 @@
-import Image from "next/image";
 import EyfsImageLeft from "@/public/images/curriculumLeft.png";
 import EyfsImageRight from "@/public/images/curriculumRight.png";
 import ThreeStarIcon from "@/public/icons/three-star-icon";
@@ -30,21 +29,19 @@ export default function CurriculumBanner() {
         <div className="flex justify-center md:justify-end relative">
           {/* Left illustration - hidden on small screens */}
           <div className="absolute hidden md:block left-4 lg:left-14 top-10 lg:top-20 z-10">
-            <Image
-              src={EyfsImageLeft}
+            <img
+              src={EyfsImageLeft.src}
               alt="Child Drawing"
               className="w-40 sm:w-48 lg:w-60 h-auto object-contain "
-              placeholder="blur"
             />
           </div>
 
           {/* Right illustration */}
           <div className="relative ">
-            <Image
-              src={EyfsImageRight}
+            <img
+              src={EyfsImageRight.src}
               alt="Child Playing"
               className="w-64 sm:w-72 lg:w-96 h-auto object-contain"
-              placeholder="blur"
             />
           </div>
         </div>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ReadingImage from "@/public/images/baby-power-01.png";
 import PlaygroundImage from "@/public/images/baby-power-02.png";
 
@@ -35,11 +34,10 @@ export default function CurriculumAims() {
 
         {/* Image */}
         <div className="flex justify-center">
-          <Image
-            src={ReadingImage}
+          <img
+            src={ReadingImage.src}
             alt="Reading Kids"
             className="w-full max-w-md h-auto object-contain rounded-md"
-            placeholder="blur"
           />
         </div>
       </div>
@@ -48,11 +46,10 @@ export default function CurriculumAims() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Image */}
         <div className="flex justify-center order-1 md:order-2">
-          <Image
-            src={PlaygroundImage}
+          <img
+            src={PlaygroundImage.src}
             alt="Playground Kids"
             className="w-full max-w-md h-auto object-contain rounded-md"
-            placeholder="blur"
           />
         </div>
 

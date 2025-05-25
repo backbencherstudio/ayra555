@@ -1,4 +1,3 @@
-import Image from "next/image";
 import CommunicationIcon from "@/public/images/icon-01.png";
 import CreativityIcon from "@/public/images/icon-02.png";
 import EmotionalIcon from "@/public/images/icon-03.png";
@@ -59,8 +58,8 @@ export default function ImportanceOfPlay() {
               <div
                 className={`w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center mb-4`}
               >
-                <Image
-                  src={item.icon}
+                <img
+                  src={item.icon.src}
                   alt={item.label}
                   className=" w-20 h-20 object-contain"
                 />

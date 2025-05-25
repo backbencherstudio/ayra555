@@ -58,10 +58,9 @@ export default function Operate() {
                     {operateCards.map((card, index) => (
                         <div key={index} className="flex flex-col items-center">
                             <div className="relative w-full h-36 sm:h-40 md:h-48 mb-3 sm:mb-4">
-                                <Image
+                                <img
                                     src={card.image}
                                     alt={card.title}
-                                    fill
                                     className="object-cover rounded-2xl"
                                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 />

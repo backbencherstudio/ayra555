@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import KeyWorkersOne from '@/public/images/worker-01.png'
 import KeyWorkersTwo from '@/public/images/worker-02.png'
 import KeyWorkersThree from '@/public/images/worker-03.png'
@@ -22,32 +21,29 @@ export default function KeyWorkers() {
         <div className="w-full lg:w-2/3 grid grid-cols-2 gap-6">
           {/* Left Large Image - Full Height */}
           <div className="relative h-full min-h-[600px]">
-            <Image
-              src={KeyWorkersOne}
+            <img
+              src={KeyWorkersOne.src}
               alt="Key Worker Teaching"
-              fill
               className="object-contain"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              priority
+              
             />
           </div>
           
           {/* Right Two Images - Equal Height */}
           <div className="grid grid-rows-2 gap-6 h-full">
             <div className="relative h-full">
-              <Image
-                src={KeyWorkersTwo}
+              <img
+                src={KeyWorkersTwo.src}
                 alt="Key Worker Activities"
-                fill
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="relative h-full">
-              <Image
-                src={KeyWorkersThree}
+              <img
+                src={KeyWorkersThree.src}
                 alt="Key Worker Teaching"
-                fill
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />

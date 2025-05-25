@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import AppImg1 from "@/public/images/mobile.png";
 
 export default function Connected() {
@@ -34,19 +33,17 @@ export default function Connected() {
                 {/* Right Images */}
                 <div className="flex justify-center md:justify-end gap-4">
                     <div className=" ">
-                        <Image
-                            src={AppImg1}
+                        <img
+                            src={AppImg1.src}
                             alt="TeachKloud App Screen 1"
                             className="w-full h-auto object-contain"
-                            placeholder="blur"
                         />
                     </div>
                     {/* <div className="w-[45%] sm:w-[40%]">
-            <Image
-              src={AppImg2}
+            <img
+              src={AppImg2.src}
               alt="TeachKloud App Screen 2"
               className="w-full h-auto object-contain"
-              placeholder="blur"
             />
           </div> */}
                 </div>
