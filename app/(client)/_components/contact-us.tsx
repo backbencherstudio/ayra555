@@ -79,23 +79,24 @@ const ContactUs = () => {
                   Baby Grow operating hours
                 </h3>
                 <p className="text-[#434642] text-sm sm:text-base">Monday-Friday 7 am-7 pm</p>
-                <p className="text-[#434642] text-sm sm:text-base">Saturday 8 am-3 pm</p>
+                <p className="text-[#434642] text-sm sm:text-base">Saturday 9 am-3 pm</p>
                 <p className="text-[#434642] text-sm sm:text-base">51 weeks a year</p>
               </div>
               <hr className="text-[#434642]" />
 
               <div className="space-y-2">
                 <p className="text-gray-700 flex items-center gap-2 text-sm sm:text-base">
-                  <Phone className="w-4 h-4" /> 00448198853
+                  <Phone className="w-4 h-4" /> 02046195852
                 </p>
                 <p className="text-gray-700 flex items-center gap-2 text-sm sm:text-base">
-                  <Mail className="w-4 h-4" /> info@babygrowcare.co.uk
+                  <Mail className="w-4 h-4" /> info@thebabygrow.co.uk
                 </p>
               </div>
 
               <div>
                 <p className="text-gray-700 flex items-center gap-2 text-sm sm:text-base">
-                  <MapPin className="w-4 h-4" /> St Peters church, St. Peter&apos;s terrace, SW6 6SJ
+                  <MapPin className="w-4 h-4" /> St. Peters church, St. Peters terrace,
+                  SW67JS
                 </p>
               </div>
             </div>
