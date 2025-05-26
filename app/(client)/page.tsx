@@ -6,6 +6,7 @@ import LeftBottomCloud from "@/public/icons/left-bottom-cloude";
 import RightTopCloud from "@/public/icons/right-top-cloude";
 import RightBottomCloud from "@/public/icons/right-bottom-cloude";
 import ContactUs from "./_components/contact-us";
+import Footer from "./_components/Footer";
 
 export default function Home() {
   return (
@@ -63,6 +64,7 @@ export default function Home() {
       <div className="mt-[20px] md:mt-[100px] lg:mt-[150px] xl:mt-[236px]">
         <ContactUs />
       </div>
+      <Footer quote="A baby is the beginning of everything-hope, dreams and endless love."/>
     </main>
   )
 }

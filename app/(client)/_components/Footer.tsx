@@ -9,6 +9,13 @@ interface QuickLink {
   href: string;
 }
 
+interface FooterProps {
+  quote?: string;
+  quoteAuthor?: string;
+}
+
+const DEFAULT_QUOTE = "A baby is the beginning of everything-hope, dreams and endless love.";
+
 const QuickLinks: QuickLink[] = [
   {
     label: "Home",
@@ -32,16 +39,23 @@ const QuickLinks: QuickLink[] = [
   },
 ];
 
-export default function Footer() {
+export default function Footer({ quote = DEFAULT_QUOTE, quoteAuthor }: FooterProps) {
   return (
     <footer className="bg-[#7CC466] mt-20 py-8 md:py-16">
       <div className="container">
         <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-[140px]">
           {/* Quote Section */}
           <div className="space-y-4 w-full md:w-[50%]">
-            <h3 className="text-xl md:text-[32px] font-normal text-white leading-normal md:leading-11">
-              A baby is the beginning of everything-hope, dreams and endless love.
-            </h3>
+            <div className="space-y-2">
+              <h3 className="text-xl md:text-[32px] font-normal text-white leading-normal md:leading-11">
+                {quote}
+              </h3>
+              {quoteAuthor && (
+                <p className="text-xl  md:text-[32px] font-normal md:text-base text-[#FEFBD6] mt-10">
+                  {quoteAuthor}
+                </p>
+              )}
+            </div>
           </div>
 
           {/* Quick Links */}
