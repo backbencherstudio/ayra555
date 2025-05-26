@@ -31,6 +31,13 @@ export default function CurriculumAims() {
               awareness because every word has the potential to heal or to harm.
             </p>
           </div>
+          <div>
+            <h3 className="font-medium text-base sm:text-lg text-[#262925]">Positive role models</h3>
+            <p className="text-sm sm:text-base text-[#262925]">
+              Children learn by watching the adults around them. Modeling kindness, respect, curiosity and perseverance
+              sets a powerful example.
+            </p>
+          </div>
         </div>
 
         {/* Image */}
@@ -44,27 +51,10 @@ export default function CurriculumAims() {
         </div>
       </div>
 
-      {/* Section 2: Bottom image + positive role models */}
+      {/* Section 2: Bottom image + extra curriculum activities */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        {/* Image */}
-        <div className="flex justify-center order-1 md:order-2">
-          <Image
-            src={PlaygroundImage}
-            alt="Playground Kids"
-            className="w-full max-w-md h-auto object-contain rounded-md"
-            placeholder="blur"
-          />
-        </div>
-
         {/* Text */}
         <div className="space-y-6 order-2 md:order-1">
-          <div>
-            <h3 className="font-medium text-base sm:text-lg text-[#262925]">Positive role models</h3>
-            <p className="text-sm sm:text-base text-[#262925]">
-              Children learn by watching the adults around them. Modeling kindness, respect, curiosity and perseverance
-              sets a powerful example.
-            </p>
-          </div>
           <div>
             <h3 className="font-medium text-base sm:text-lg text-[#262925]">Extra curriculum activities we offer</h3>
             <ul className="list-disc list-inside text-sm sm:text-base text-[#262925] space-y-1">
@@ -73,6 +63,16 @@ export default function CurriculumAims() {
               <li>Kindergarten</li>
             </ul>
           </div>
+        </div>
+
+        {/* Image */}
+        <div className="flex justify-center order-1 md:order-2">
+          <Image
+            src={PlaygroundImage}
+            alt="Playground Kids"
+            className="w-full max-w-md h-auto object-contain rounded-md"
+            placeholder="blur"
+          />
         </div>
       </div>
     </section>
