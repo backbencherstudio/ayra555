@@ -36,7 +36,7 @@ const visionCards: VisionCard[] = [
     {
         Icon: FamilyFocusedIcon,
         title: "Family Focused",
-        description: "We believe in working hand-in-hand with parents to create a smooth and supportive learning journey for every child. By building strong home-nursery connections, we ensure that each child's experience feels consistent and nurturing across both settings. Our flexible approach is designed to meet the diverse needs of families, making it simple for parents to stay involved and informed so as of the"
+        description: "Family focused: We believe in working hand-in-hand with parents to create a smooth and supportive learning journey for every child. By building strong home-nursery connections, we ensure that each child's experience feels consistent and nurturing across both settings. Our flexible approach is designed to meet the diverse needs of families, making it simple for parents to stay involved and informed every step of the way."
     }
 ];
 
