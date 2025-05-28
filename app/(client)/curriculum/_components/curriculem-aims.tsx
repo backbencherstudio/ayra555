@@ -27,8 +27,7 @@ export default function CurriculumAims() {
           <div>
             <h3 className="font-medium text-base sm:text-lg text-[#262925]">Love for books</h3>
             <p className="text-sm sm:text-base text-[#262925]">
-              What we speak becomes a reflection of what we are. We understand to speak with intention, kindness and
-              awareness because every word has the potential to heal or to harm.
+            Developing a love for reading builds strong language skills, boosts imagination, strengthens memory and concentration, and lays the foundation for lifelong learning.
             </p>
           </div>
           <div>

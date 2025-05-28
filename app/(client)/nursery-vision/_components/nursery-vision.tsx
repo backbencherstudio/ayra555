@@ -9,7 +9,7 @@ import PlayToLearnIcon from '@/public/icons/play-to-learn-icon';
 interface VisionCard {
     title: string;
     description: string;
-    Icon?: React.ComponentType; // Changed from icon?: React.ReactNode
+    Icon?: React.ComponentType;
 }
 
 const visionCards: VisionCard[] = [
