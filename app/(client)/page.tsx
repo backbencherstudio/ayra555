@@ -1,7 +1,7 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
-import BabyGrow from '@/public/images/baby-grow.png'
-import LeftTopCloud from '@/public/icons/left-top-cloude'
+// import BabyGrow from "@/public/images/baby-grow.png";
+import LeftTopCloud from "@/public/icons/left-top-cloude";
 import LeftBottomCloud from "@/public/icons/left-bottom-cloude";
 import RightTopCloud from "@/public/icons/right-top-cloude";
 import RightBottomCloud from "@/public/icons/right-bottom-cloude";
@@ -29,7 +29,7 @@ export default function Home() {
       <div className="container mx-auto flex flex-col items-center justify-center text-center px-4 py-8 md:py-0">
         {/* Logo */}
         <div className="w-[242px] h-[242px] md:w-[242px] md:h-[242px] relative mb-6 md:mb-8 mt-4 md:mt-6">
-          <div className="rounded-full bg-white p-4 shadow-sm">
+          {/* <div className="rounded-full bg-white p-4 shadow-sm">
             <div className="relative w-full h-full">
               <Image
                 src={BabyGrow}
@@ -40,12 +40,13 @@ export default function Home() {
                 priority
               />
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Text content */}
         <h1 className="text-xl md:text-[48px] font-medium text-[#7CC466] mb-4 leading-tight">
-          We are a day nursery caring for <br /> babies 3 months- 24 months.
+          {/* We are now looking after <br /> 3 months- 36 months. */}
+          We are a day nursery caring <br /> for babies from 3 months.
         </h1>
 
         <p className="text-base md:text-lg text-green-600 px-4">
@@ -64,7 +65,7 @@ export default function Home() {
       <div className="mt-[20px] md:mt-[100px] lg:mt-[150px] xl:mt-[236px]">
         <ContactUs />
       </div>
-      <Footer quote="A baby is the beginning of everything-hope, dreams and endless love."/>
+      <Footer quote="A baby is the beginning of everything-hope, dreams and endless love." />
     </main>
-  )
+  );
 }

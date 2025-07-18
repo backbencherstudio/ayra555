@@ -13,7 +13,7 @@ export default function Banner() {
             Nursery Vision
           </h1>
           <h2 className="text-lg sm:text-xl font-medium text-[#434642]">
-            We are the baby experts
+          Experts in the earliest years
           </h2>
           <p className="text-base sm:text-lg text-[#5E615D] leading-relaxed">
             Our team consists of passionate and caring educators with extensive

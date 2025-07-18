@@ -1,38 +1,26 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+// import { usePathname } from "next/navigation";
+import logo from "@/public/images/baby-grow.png";
+import Image from "next/image";
 
-interface NavLink {
-  label: string;
-  href: string;
-}
-
-const NavLinks: NavLink[] = [
-  { label: "Home", href: "/" },
-  { label: "Nursery Vision", href: "/nursery-vision" },
-  { label: "Life at Nursery", href: "/life-at-nursery" },
-  { label: "Curriculum", href: "/curriculum" },
-  { label: "Contact Us", href: "/contact-us" },
+const navRows = [
+  [
+    { label: "Home", href: "/", bg: "bg-[#A6F8EC]" },
+    { label: "Nursery Vision", href: "/nursery-vision", bg: "bg-[#FCAACB]" },
+    { label: "Life at Nursery", href: "/life-at-nursery", bg: "bg-[#B6F9B2]" },
+  ],
+  [
+    { label: "Curriculum", href: "/curriculum", bg: "bg-[#E3B6F9]" },
+    { label: "Contact Us", href: "/contact-us", bg: "bg-[#A6F8EC]" },
+  ],
 ];
 
 export default function Navbar() {
-  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
-
-  const getNavbarBackground = () => {
-    switch (pathname) {
-      case "/nursery-vision":
-        return "bg-[rgba(218,250,220,0.20)]";
-      case "/life-at-nursery":
-        return "bg-[rgba(255,216,169,0.20)]";
-      default:
-        return "bg-[rgba(255,255,255,0.20)]";
-    }
-  };
 
   // 👇 Close on outside click
   useEffect(() => {
@@ -51,62 +39,54 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="pt-6 px-1.5 md:px-0">
-      <div
-        ref={menuRef}
-        className={`container border border-[#FFF] rounded-2xl ${getNavbarBackground()}`}
-      >
-        <div className="flex justify-between items-center h-16 px-4">
-          {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {NavLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`transition-colors ${pathname === link.href
-                    ? "text-pink-600 font-semibold"
-                    : "text-gray-600 hover:text-gray-900"
-                  }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          {/* Registration Button */}
-          <div>
-            <Link
-              href="/contact-us"
-              className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors"
+    <nav className="w-full py-6 px-2 md:px-0 font-['Quicksand','Comic Sans MS',cursive,sans-serif] ">
+      <div className="flex items-start md:items-center justify-start md:justify-center w-full">
+        {/* Logo and text */}
+        <div className="flex flex-col items-center min-w-[260px] md:min-w-[320px] mr-8">
+          <Image
+            src={logo}
+            alt="Futures Nursery Logo"
+            width={200}
+            height={200}
+            className="mb-2"
+            priority
+          />
+          {/* <div className="text-center mt-2">
+            <div
+              className="text-2xl md:text-3xl font-bold leading-tight"
+              style={{ letterSpacing: "1px" }}
             >
-              Registration
-            </Link>
+              FUTURES
+              <br />
+              NURSERY
+            </div>
+            <div className="text-xs md:text-sm mt-2 italic tracking-wide">
+              THINK BIG FOR YOUR LITTLE ONE.
+            </div>
+          </div> */}
+        </div>
+        {/* Navigation links */}
+        <div className="flex-1 flex flex-col items-center justify-center">
+          <div className="flex flex-col space-y-6 mt-4 md:mt-0">
+            {navRows.map((row, i) => (
+              <div key={i} className="flex flex-row space-x-8 justify-center">
+                {row.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`px-8 py-2 md:px-10 md:py-3 rounded-full text-lg md:text-2xl font-medium shadow-sm transition-colors ${link.bg}`}
+                    style={{
+                      fontFamily:
+                        "'Quicksand','Comic Sans MS',cursive,sans-serif",
+                    }}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 px-4 border-t border-gray-200">
-            {NavLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsMenuOpen(false)} // 👈 close menu on click
-                className={`block py-2 ${pathname === link.href
-                    ? "text-pink-600 font-semibold"
-                    : "text-gray-600 hover:text-gray-900"
-                  }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        )}
       </div>
     </nav>
   );
