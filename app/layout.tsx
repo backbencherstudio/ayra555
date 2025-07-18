@@ -9,9 +9,9 @@ const fredoka = Fredoka({
 });
 
 export const metadata: Metadata = {
-  title: "Ayra",
+  title: "The baby grow",
   description:
-    "Ayra is a platform for creating and sharing AI-powered applications.",
+    "Thebabygrow is a platform for creating and sharing AI-powered applications.",
   
 };
 

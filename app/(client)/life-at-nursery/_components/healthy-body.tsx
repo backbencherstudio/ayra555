@@ -50,7 +50,7 @@ export default function HealthyBody() {
             />
           </div>
           <h4 className="text-lg sm:text-xl font-bold text-[#262925] mb-4 flex items-center gap-2">
-            <span>👧</span> 1–3 Years
+            <span>👧</span> 12 months+
           </h4>
           <p className="text-base sm:text-lg text-[#434642] leading-relaxed">
             As children become more independent, we serve nutritious,

@@ -45,7 +45,8 @@ export default function Home() {
 
         {/* Text content */}
         <h1 className="text-xl md:text-[48px] font-medium text-[#7CC466] mb-4 leading-tight">
-        We are now looking after <br /> 3 months- 36 months.
+          {/* We are now looking after <br /> 3 months- 36 months. */}
+          We are a day nursery caring <br /> for babies from 3 months.
         </h1>
 
         <p className="text-base md:text-lg text-green-600 px-4">
