@@ -9,10 +9,9 @@ const fredoka = Fredoka({
 });
 
 export const metadata: Metadata = {
-  title: "The baby grow",
+  title: "The Baby Grow",
   description:
-    "Thebabygrow is a platform for creating and sharing AI-powered applications.",
-  
+    "The Baby Grow is a dynamic platform designed to create and share AI-powered applications, offering innovative solutions to support your baby’s growth and development through cutting-edge technology.",
 };
 
 export default function RootLayout({
@@ -28,13 +27,14 @@ export default function RootLayout({
           position="top-right"
           toastOptions={{
             style: {
-              background: 'linear-gradient(to right, #7CC466, #65A354)',
-              color: '#fff',
+              background: "linear-gradient(to right, #7CC466, #65A354)",
+              color: "#fff",
             },
             classNames: {
-              success: 'bg-gradient-to-r from-[#7CC466] to-[#65A354] text-white',
-              error: 'bg-gradient-to-r from-[#ef4444] to-[#dc2626] text-white'
-            }
+              success:
+                "bg-gradient-to-r from-[#7CC466] to-[#65A354] text-white",
+              error: "bg-gradient-to-r from-[#ef4444] to-[#dc2626] text-white",
+            },
           }}
         />
         {children}
