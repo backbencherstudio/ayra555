@@ -39,34 +39,44 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="w-full py-6 px-2 md:px-0 font-['Quicksand','Comic Sans MS',cursive,sans-serif] ">
-      <div className="flex items-start md:items-center justify-start md:justify-center w-full">
+    <nav className="w-full py-4 px-2 md:px-0 font-['Quicksand','Comic Sans MS',cursive,sans-serif] ">
+      <div className="flex items-center justify-between w-full max-w-6xl mx-auto">
         {/* Logo and text */}
-        <div className="flex flex-col items-center min-w-[260px] md:min-w-[320px] mr-8">
+        <div className="flex flex-col items-center min-w-[120px] md:min-w-[200px] mr-2 md:mr-8">
           <Image
             src={logo}
             alt="Futures Nursery Logo"
-            width={200}
-            height={200}
-            className="mb-2"
+            width={100}
+            height={100}
+            className="mb-2 md:w-[200px] md:h-[200px] w-[100px] h-[100px] navbar-xs-logo"
             priority
           />
-          {/* <div className="text-center mt-2">
-            <div
-              className="text-2xl md:text-3xl font-bold leading-tight"
-              style={{ letterSpacing: "1px" }}
+        </div>
+        {/* Hamburger for mobile */}
+        <div className="md:hidden flex items-center">
+          <button
+            aria-label="Open menu"
+            className="focus:outline-none"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+          >
+            <svg
+              className="w-8 h-8 text-gray-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              FUTURES
-              <br />
-              NURSERY
-            </div>
-            <div className="text-xs md:text-sm mt-2 italic tracking-wide">
-              THINK BIG FOR YOUR LITTLE ONE.
-            </div>
-          </div> */}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
         {/* Navigation links */}
-        <div className="flex-1 flex flex-col items-center justify-center">
+        <div className="hidden md:flex flex-1 flex-col items-center justify-center">
           <div className="flex flex-col space-y-6 mt-4 md:mt-0">
             {navRows.map((row, i) => (
               <div key={i} className="flex flex-row space-x-8 justify-center">
@@ -74,7 +84,7 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`px-8 py-2 md:px-10 md:py-3 rounded-full text-lg md:text-2xl font-medium shadow-sm transition-colors ${link.bg}`}
+                    className={`px-8 py-2 md:px-10 md:py-3 rounded-full text-lg md:text-2xl font-medium shadow-sm transition-colors ${link.bg} navbar-xs-link`}
                     style={{
                       fontFamily:
                         "'Quicksand','Comic Sans MS',cursive,sans-serif",
@@ -87,6 +97,27 @@ export default function Navbar() {
             ))}
           </div>
         </div>
+        {/* Mobile menu dropdown */}
+        {isMenuOpen && (
+          <div
+            ref={menuRef}
+            className="absolute top-[90PX] right-4 z-50 w-64 bg-white rounded-xl shadow-lg p-6 flex flex-col space-y-4 md:hidden animate-fade-in navbar-xs-dropdown"
+          >
+            {navRows.flat().map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block w-full text-center px-6 py-3 rounded-full text-lg font-medium shadow-sm transition-colors ${link.bg} navbar-xs-link`}
+                style={{
+                  fontFamily: "'Quicksand','Comic Sans MS',cursive,sans-serif",
+                }}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </nav>
   );

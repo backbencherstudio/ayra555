@@ -16,3 +16,23 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+@media (max-width: 340px) {
+  .navbar-xs-logo {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .navbar-xs-link {
+    font-size: 1rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  .navbar-xs-dropdown {
+    width: 90vw !important;
+    min-width: unset !important;
+    padding: 1rem !important;
+    right: 2vw !important;
+  }
+}
