@@ -21,7 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" href="/logo.png" />
+      <head>
+        <link rel="icon" href="/logo.png" />
+        <link
+          rel="canonical"
+          href="https://www.thebabygrow.co.uk/"
+        />
+      </head>
       <body className={`${fredoka.variable} font-fredoka antialiased`}>
         <Toaster
           position="top-right"
