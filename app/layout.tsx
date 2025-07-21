@@ -11,7 +11,7 @@ const fredoka = Fredoka({
 export const metadata: Metadata = {
   title: "The Baby Grow",
   description:
-    "We are a day nursery caring for babies from 3 months. Contact Us",
+    "Trusted day nursery in the UK offering loving childcare for babies from 3 months. Safe, nurturing, and child-centred early learning environment.",
 };
 
 export default function RootLayout({
