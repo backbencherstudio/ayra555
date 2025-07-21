@@ -11,7 +11,7 @@ const fredoka = Fredoka({
 export const metadata: Metadata = {
   title: "The Baby Grow",
   description:
-    "The Baby Grow is a dynamic platform designed to create and share AI-powered applications, offering innovative solutions to support your baby’s growth and development through cutting-edge technology.",
+    "We are a day nursery caring for babies from 3 months. Contact Us",
 };
 
 export default function RootLayout({
@@ -23,10 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/logo.png" />
-        <link
-          rel="canonical"
-          href="https://www.thebabygrow.co.uk/"
-        />
+        <link rel="canonical" href="https://www.thebabygrow.co.uk/" />
       </head>
       <body className={`${fredoka.variable} font-fredoka antialiased`}>
         <Toaster
